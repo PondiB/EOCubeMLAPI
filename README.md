@@ -29,7 +29,7 @@ Contributing
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md)for details on the process for submitting pull requests to us.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License Version 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 Organizations and projects that provided data and tools.
