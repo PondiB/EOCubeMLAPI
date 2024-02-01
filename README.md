@@ -3,7 +3,7 @@
 ## Introduction
 This repository hosts the Proof of Concept (PoC) leading to Generic Machine Learning (ML) and Deep Learning (DL) APIs designed specifically for processing Earth Observation (EO) Data Cubes/Satellite Image Time Series. Our primary goal is to advance interoperability and reproducibility in the analysis of EO data cubes, particularly in cloud-based environments. This project aims to provide a standardized, easy-to-use interface for applying advanced ML and DL techniques to EO data, facilitating research and applications in fields such as biodiversity monitoring, land use analysis, and crop yield monitoring.
 
-![EO Data Cube](docs/dc_timeseries.png)
+![EOCubeMLAPI Idea ](docs/eo-ml.png)
 
 ## Target Features
 - **Unified API Structure**: A consistent and intuitive API design that allows users to apply various ML and DL models to EO data cubes without needing extensive knowledge about the underlying data structures.
