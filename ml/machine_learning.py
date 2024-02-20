@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import xgboost as xgb
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.svm import SVC, SVR
 from sklearn.neighbors import  KNeighborsRegressor
@@ -138,41 +139,7 @@ def ml_predict(model, data):
         return f"An error occurred while making predictions: {e}"
 
 
-
-
-# Example usage list_ml_models:
-ml_models = list_ml_models()
-print("Classification models:")
-print(ml_models['classification'])
-print("\nRegression models:")
-print(ml_models['regression'])
-
-# Example usage model_param_blueprint:
-rf_classification_model_params = model_param_blueprint('random_forest', 'classification')
-rf_regression_model_params = model_param_blueprint('random_forest', 'regression')
-
-print("\nRandom forest Classification model default parameters:")
-print(rf_classification_model_params )
-print("\nRandom forest Regression model default parameters:")
-print(rf_regression_model_params)
-
-
-
-# Example usage:
-# For a classification task
-#classification_model = ml_fit(X_train, y_train, ml_method="random_forest", parameters={"n_estimators": 100})
-
-# For a regression task
-#regression_model = ml_fit(X_train, y_train, ml_method="support_vector_machine")
-
-
-# Example usage ml_predict:
-# Assuming that 'trained_model' is your previously trained model and 'X_new' is the new data you want to predict on.
-# predictions = ml_predict(trained_model, X_new)
-# print(predictions)
-
-
-def model_param_blueprint2(model_name, task_type):
+def model_param_blueprint2(model_name, task_type="classification")-> Dict:
     """
     Provides default parameters and descriptions for a given model and task type, including an option to set the seed.
     
@@ -223,13 +190,6 @@ def model_param_blueprint2(model_name, task_type):
         raise ValueError(f"Model '{model_name}' is not recognized for task type '{task_type}'.")
 
     return model_info
-
-# Example usage model_param_blueprint_with_descriptions:
-model_params_desc = model_param_blueprint2('random_forest', 'classification')
-print(model_params_desc)
-print("Model parameters and descriptions:")
-for param, info in model_params_desc.items():
-    print(f"{param}: Default - {info['default']}, Description - {info['description']}")
 
 
 # cross-validation, fitting more than one model and returning the best model
